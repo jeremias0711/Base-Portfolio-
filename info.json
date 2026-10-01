@@ -1,0 +1,106 @@
+{
+  "site": {
+    "title": "Jeremías Gutiérrez — Creador digital",
+    "description": "Portafolio de Jeremías Gutiérrez: creación digital, 3D y animación, desarrollo interactivo, diseño visual y fotografía.",
+    "logo": "JG",
+    "year": 2026
+  },
+  "nav": {
+    "links": [
+      { "label": "Index", "href": "#index" },
+      {
+        "label": "Works",
+        "href": "#works",
+        "submenu": [
+          { "label": "3D & Animación", "href": "#work-3d" },
+          { "label": "Desarrollo interactivo", "href": "#work-dev" },
+          { "label": "Diseño visual", "href": "#work-visual" }
+        ]
+      },
+      { "label": "Studio", "href": "#studio" },
+      { "label": "Archive", "href": "#archive" },
+      { "label": "Contact", "href": "#contact" }
+    ]
+  },
+  "hero": {
+    "eyebrow": "Portafolio — 2026",
+    "name": "Jeremías Gutiérrez",
+    "roles": [
+      "Creador digital",
+      "Arte & animación 3D",
+      "Desarrollo interactivo",
+      "Diseño UX / UI",
+      "Fotografía"
+    ],
+    "subtitle": "Estudiante de Creación Digital en la Universidad El Bosque. Trabajo donde se cruzan el arte, la tecnología y la estrategia."
+  },
+  "manifesto": "Mi forma de trabajar parte del análisis. Identifico los puntos de quiebre de un proyecto —ya sea lo que frena la experiencia del usuario, la comunicación de una marca o el flujo de producción— y luego propongo soluciones creativas, *y a veces disruptivas*, para resolverlos.",
+  "studio": {
+    "tag": "Studio",
+    "title": "Un perfil integral para<br>proyectos completos.",
+    "text": "Combino modelado 3D, animación, programación, desarrollo de videojuegos, diseño gráfico, diseño web UX/UI y fotografía. Por eso puedo acompañar un proyecto desde el concepto visual hasta un producto interactivo que funciona de verdad.",
+    "areas": [
+      {
+        "num": "01",
+        "title": "3D y animación",
+        "text": "Modelado 3D y animación para piezas audiovisuales e interactivas.",
+        "tags": ["Blender", "Unity"]
+      },
+      {
+        "num": "02",
+        "title": "Desarrollo interactivo",
+        "text": "Programación, creación de videojuegos y diseño web.",
+        "tags": ["VS Code", "GitHub"]
+      },
+      {
+        "num": "03",
+        "title": "Diseño visual",
+        "text": "Diseño gráfico y fotografía con criterio de composición y marca.",
+        "tags": ["Illustrator", "Photoshop", "Figma"]
+      }
+    ]
+  },
+  "tools": [
+    "Blender",
+    "Unity",
+    "Illustrator",
+    "Photoshop",
+    "Figma",
+    "VS Code",
+    "GitHub",
+    "Herramientas de IA"
+  ],
+  "lookingFor": {
+    "tag": "Qué busco",
+    "title": "Prácticas, proyectos o colaboraciones con estudios, agencias y empresas de tecnología, videojuegos o contenido digital.",
+    "text": "Quiero aportar una visión integral de la creación digital, aprender de profesionales del sector y convertir ideas en experiencias digitales con impacto real.",
+    "cta": { "label": "Hablemos", "href": "#contact" }
+  },
+  "archive": {
+    "tag": "Archive",
+    "title": "Galería",
+    "note": "Reemplaza cada celda con tus renders, capturas o fotografías.",
+    "items": [
+      { "label": "Render 3D", "variant": "a", "tall": true },
+      { "label": "UI concept", "variant": "b", "tall": false },
+      { "label": "Fotografía", "variant": "c", "tall": false },
+      { "label": "Game art", "variant": "d", "tall": false },
+      { "label": "Animación", "variant": "e", "tall": true },
+      { "label": "Branding", "variant": "f", "tall": false }
+    ]
+  },
+  "contact": {
+    "tag": "Contact",
+    "title": "¿Construimos algo juntos?",
+    "email": "jgutierrezmo@unbosque.edu.co",
+    "socials": [
+      { "label": "LinkedIn", "href": "#" },
+      { "label": "Behance", "href": "#" },
+      { "label": "ArtStation", "href": "#" }
+    ]
+  },
+  "footer": {
+    "wordmark": "JEREMÍAS",
+    "university": "Creación Digital — Universidad El Bosque"
+  }
+}

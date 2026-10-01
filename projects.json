@@ -1,0 +1,32 @@
+[
+  {
+    "id": "work-3d",
+    "category": "3D / Animación",
+    "name": "[Nombre del proyecto 3D]",
+    "role": "Rol — modelado, animación o dirección de arte.",
+    "tools": ["Blender", "Unity"],
+    "link": "#contact",
+    "linkLabel": "Añadir enlace →",
+    "thumbVariant": "a"
+  },
+  {
+    "id": "work-dev",
+    "category": "Desarrollo",
+    "name": "[Nombre del proyecto interactivo]",
+    "role": "Rol — programación, diseño de juego o desarrollo web.",
+    "tools": ["VS Code", "GitHub"],
+    "link": "#contact",
+    "linkLabel": "Añadir enlace →",
+    "thumbVariant": "b"
+  },
+  {
+    "id": "work-visual",
+    "category": "Diseño visual",
+    "name": "[Nombre del proyecto visual]",
+    "role": "Rol — diseño gráfico, UI o fotografía.",
+    "tools": ["Illustrator", "Figma"],
+    "link": "#contact",
+    "linkLabel": "Añadir enlace →",
+    "thumbVariant": "c"
+  }
+]

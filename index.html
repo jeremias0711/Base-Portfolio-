@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portafolio</title>
+<meta name="description" content="">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="grain" aria-hidden="true"></div>
+
+<div id="dataError" class="data-error" hidden>
+  No se pudo cargar <code>info.json</code> / <code>projects.json</code>. Si abriste este archivo con doble clic
+  (protocolo <code>file://</code>), el navegador bloquea esas lecturas por seguridad. Sirve la carpeta con un
+  servidor local — por ejemplo la extensión <strong>Live Server</strong> de VS Code, o <code>npx serve</code> —
+  y vuelve a cargar la página.
+</div>
+
+<header class="nav" id="nav">
+  <div class="nav__capsule">
+    <a href="#index" class="nav__logo" id="navLogo"></a>
+    <nav class="nav__links" id="navLinks"></nav>
+    <button class="nav__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="menu" id="mobileMenu">
+  <div class="menu__panel" id="menuPanel">
+    <div class="menu__handle"></div>
+    <div id="menuLinks"></div>
+    <div class="menu__footer" id="menuFooter"></div>
+  </div>
+</div>
+
+<main>
+
+  <section id="index" class="hero">
+    <div class="hero__bg"></div>
+    <div class="hero__content">
+      <p class="hero__eyebrow" id="heroEyebrow"></p>
+      <h1 class="hero__title" id="heroTitle"></h1>
+      <div class="hero__roles" id="heroRoles" aria-live="polite"></div>
+      <p class="hero__subtitle" id="heroSubtitle"></p>
+    </div>
+    <a href="#manifesto" class="hero__scroll">
+      <span>Scroll</span>
+      <svg width="14" height="22" viewBox="0 0 14 22" fill="none"><path d="M7 1v18M1 13l6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+  </section>
+
+  <section id="manifesto" class="manifesto reveal">
+    <p class="manifesto__text" id="manifestoText"></p>
+  </section>
+
+  <section id="studio" class="studio">
+    <div class="studio__intro reveal">
+      <span class="section-tag" id="studioTag"></span>
+      <h2 class="section-title" id="studioTitle"></h2>
+      <p class="studio__text" id="studioText"></p>
+    </div>
+    <div class="studio__grid" id="studioGrid"></div>
+  </section>
+
+  <section id="works" class="works">
+    <div class="works__head reveal">
+      <span class="section-tag">Works</span>
+      <h2 class="section-title">Áreas de experiencia</h2>
+      <p class="works__note">Proyectos cargados dinámicamente desde <code>projects.json</code>.</p>
+    </div>
+    <div class="works__list" id="worksList"></div>
+  </section>
+
+  <section class="marquee reveal">
+    <div class="marquee__track" id="marqueeTrack"></div>
+  </section>
+
+  <section class="looking">
+    <div class="looking__inner reveal">
+      <span class="section-tag" id="lookingTag"></span>
+      <h2 class="section-title" id="lookingTitle"></h2>
+      <p class="looking__text" id="lookingText"></p>
+      <a href="#contact" class="btn" id="lookingCta"></a>
+    </div>
+  </section>
+
+  <section id="archive" class="archive">
+    <div class="archive__head reveal">
+      <span class="section-tag" id="archiveTag"></span>
+      <h2 class="section-title" id="archiveTitle"></h2>
+      <p class="works__note" id="archiveNote"></p>
+    </div>
+    <div class="archive__grid" id="archiveGrid"></div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="contact__inner reveal">
+      <span class="section-tag" id="contactTag"></span>
+      <h2 class="section-title" id="contactTitle"></h2>
+      <a href="#" class="contact__email" id="contactEmail"></a>
+      <div class="contact__socials" id="contactSocials"></div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <a href="#index" class="footer__wordmark" id="footerWordmark"></a>
+  <div class="footer__grid">
+    <div class="footer__block">
+      <span class="footer__label">Contact</span>
+      <a href="#" id="footerEmail"></a>
+    </div>
+    <nav class="footer__block footer__sitemap" id="footerSitemap">
+      <span class="footer__label">Sitemap</span>
+    </nav>
+    <div class="footer__block" id="footerSocial">
+      <span class="footer__label">Social</span>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <span id="footerCopyright"></span>
+    <span id="footerUniversity"></span>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="Volver arriba">
+  <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 13V3M3 7l5-5 5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
+
+<script src="script.js"></script>
+</body>
+</html>
