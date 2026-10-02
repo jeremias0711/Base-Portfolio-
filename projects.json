@@ -1,32 +1,38 @@
 [
   {
-    "id": "work-3d",
+    "id": "work-lobo",
+    "type": "model3d",
     "category": "3D / Animación",
-    "name": "[Nombre del proyecto 3D]",
-    "role": "Rol — modelado, animación o dirección de arte.",
-    "tools": ["Blender", "Unity"],
-    "link": "#contact",
-    "linkLabel": "Añadir enlace →",
-    "thumbVariant": "a"
+    "name": "Lobo — personaje rigged",
+    "role": "Modelado, rigging y animación de un ciclo de caminata.",
+    "tools": ["Blender"],
+    "variants": [
+      { "label": "Modelo 3D", "src": "models/lobo_modelo.glb", "autoplay": false },
+      { "label": "Animación", "src": "models/lobo_animacion.glb", "autoplay": true }
+    ]
   },
   {
-    "id": "work-dev",
-    "category": "Desarrollo",
-    "name": "[Nombre del proyecto interactivo]",
-    "role": "Rol — programación, diseño de juego o desarrollo web.",
-    "tools": ["VS Code", "GitHub"],
-    "link": "#contact",
-    "linkLabel": "Añadir enlace →",
-    "thumbVariant": "b"
+    "id": "work-planta",
+    "type": "model3d",
+    "category": "3D / Animación",
+    "name": "Planta — floración",
+    "role": "Modelado orgánico y animación de apertura de una flor.",
+    "tools": ["Blender"],
+    "variants": [
+      { "label": "Modelo 3D", "src": "models/planta_modelo.glb", "autoplay": false },
+      { "label": "Animación", "src": "models/planta_animacion.glb", "autoplay": true }
+    ]
   },
   {
-    "id": "work-visual",
-    "category": "Diseño visual",
-    "name": "[Nombre del proyecto visual]",
-    "role": "Rol — diseño gráfico, UI o fotografía.",
-    "tools": ["Illustrator", "Figma"],
-    "link": "#contact",
-    "linkLabel": "Añadir enlace →",
-    "thumbVariant": "c"
+    "id": "work-skate",
+    "type": "model3d",
+    "category": "3D / Modelado",
+    "name": "Rampa de skate",
+    "role": "Modelado hard-surface de una patineta y su rampa, con animación mecánica.",
+    "tools": ["Blender"],
+    "variants": [
+      { "label": "Modelo 3D", "src": "models/pendulumskate_modelo.glb", "autoplay": false },
+      { "label": "Animación", "src": "models/pendulumskate_animacion.glb", "autoplay": true }
+    ]
   }
 ]

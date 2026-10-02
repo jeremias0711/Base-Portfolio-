@@ -12,9 +12,7 @@
         "label": "Works",
         "href": "#works",
         "submenu": [
-          { "label": "3D & Animación", "href": "#work-3d" },
-          { "label": "Desarrollo interactivo", "href": "#work-dev" },
-          { "label": "Diseño visual", "href": "#work-visual" }
+          { "label": "3D & Animación", "href": "#work-lobo" }
         ]
       },
       { "label": "Studio", "href": "#studio" },
@@ -79,14 +77,44 @@
   "archive": {
     "tag": "Archive",
     "title": "Galería",
-    "note": "Reemplaza cada celda con tus renders, capturas o fotografías.",
+    "note": "Una selección de proyectos, diseños y procesos creativos.",
     "items": [
-      { "label": "Render 3D", "variant": "a", "tall": true },
-      { "label": "UI concept", "variant": "b", "tall": false },
-      { "label": "Fotografía", "variant": "c", "tall": false },
-      { "label": "Game art", "variant": "d", "tall": false },
-      { "label": "Animación", "variant": "e", "tall": true },
-      { "label": "Branding", "variant": "f", "tall": false }
+      {
+        "label": "Digital Series — cartel",
+        "src": "Galeria/Captura de pantalla 2026-09-07 123647.png",
+        "variant": "a",
+        "tall": true
+      },
+      {
+        "label": "Lobo — rig en Blender",
+        "src": "Galeria/Captura de pantalla 2026-08-30 163429.png",
+        "variant": "b",
+        "tall": false
+      },
+      {
+        "label": "Digital Series — diseño",
+        "src": "Galeria/Captura de pantalla 2026-05-17 160319.png",
+        "variant": "c",
+        "tall": false
+      },
+      {
+        "label": "Planta 3D — textura",
+        "src": "Galeria/Captura de pantalla 2026-05-17 155533.png",
+        "variant": "d",
+        "tall": false
+      },
+      {
+        "label": "Planta 3D — escena",
+        "src": "Galeria/Captura de pantalla 2026-05-13 210210.png",
+        "variant": "e",
+        "tall": true
+      },
+      {
+        "label": "Lobo — modelado en Blender",
+        "src": "Galeria/Captura de pantalla 2026-05-13 202802.png",
+        "variant": "f",
+        "tall": false
+      }
     ]
   },
   "contact": {

@@ -136,22 +136,74 @@ function renderStudio(info) {
 
 function renderWorks(projects) {
   const list = document.getElementById("worksList");
-  list.innerHTML = projects
-    .map(
-      (p) => `
-      <article id="${p.id}" class="work reveal">
-        <div class="work__thumb work__thumb--${p.thumbVariant}">
-          <span class="work__thumb-label">${p.category}</span>
+  list.innerHTML = projects.map((p, i) => renderWorkCard(p, i)).join("");
+  setupModelViewers(list);
+}
+
+function renderWorkCard(p, index) {
+  if (p.type === "model3d") {
+    const viewerId = `mv-${index}`;
+    const first = p.variants[0];
+    const tabs = p.variants.length > 1
+      ? `<div class="work__tabs" data-target="${viewerId}">
+          ${p.variants
+            .map(
+              (v, vi) => `
+            <button type="button" class="work__tab${vi === 0 ? " is-active" : ""}"
+              data-src="${v.src}" data-autoplay="${v.autoplay}">${v.label}</button>`
+            )
+            .join("")}
+        </div>`
+      : "";
+    return `
+      <article id="${p.id}" class="work work--3d reveal">
+        <div class="work__viewer">
+          <model-viewer id="${viewerId}" src="${first.src}" alt="${p.name}"
+            camera-controls auto-rotate shadow-intensity="1" exposure="1"
+            environment-image="neutral" loading="lazy"
+            ${first.autoplay ? "autoplay" : ""}></model-viewer>
+          ${tabs}
         </div>
         <div class="work__info">
           <h3>${p.name}</h3>
           <p class="work__role">${p.role}</p>
           <div class="tag-row">${tagsHTML(p.tools)}</div>
-          <a href="${p.link}" class="work__link">${p.linkLabel}</a>
         </div>
-      </article>`
-    )
-    .join("");
+      </article>`;
+  }
+
+  return `
+    <article id="${p.id}" class="work reveal">
+      <div class="work__thumb work__thumb--${p.thumbVariant}">
+        <span class="work__thumb-label">${p.category}</span>
+      </div>
+      <div class="work__info">
+        <h3>${p.name}</h3>
+        <p class="work__role">${p.role}</p>
+        <div class="tag-row">${tagsHTML(p.tools)}</div>
+        <a href="${p.link}" class="work__link">${p.linkLabel}</a>
+      </div>
+    </article>`;
+}
+
+// Delegated click handling for the Modelo/Animación tabs next to each <model-viewer>.
+function setupModelViewers(container) {
+  container.querySelectorAll(".work__tabs").forEach((tabs) => {
+    const viewer = document.getElementById(tabs.dataset.target);
+    if (!viewer) return;
+    tabs.querySelectorAll(".work__tab").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        tabs.querySelectorAll(".work__tab").forEach((b) => b.classList.remove("is-active"));
+        btn.classList.add("is-active");
+        viewer.setAttribute("src", btn.dataset.src);
+        if (btn.dataset.autoplay === "true") {
+          viewer.setAttribute("autoplay", "");
+        } else {
+          viewer.removeAttribute("autoplay");
+        }
+      });
+    });
+  });
 }
 
 function renderMarquee(info) {
@@ -183,10 +235,35 @@ function renderArchive(info) {
     .map(
       (item) => `
       <div class="archive__cell reveal archive__cell--${item.variant}${item.tall ? " archive__cell--tall" : ""}">
+        <button class="archive__image-button" type="button" aria-label="Ver imagen completa: ${item.label}">
+          <img src="${item.src}" alt="" loading="lazy" decoding="async">
+        </button>
         <span>${item.label}</span>
       </div>`
     )
     .join("");
+
+  const lightbox = document.getElementById("archiveLightbox");
+  const lightboxImage = document.getElementById("archiveLightboxImage");
+  const lightboxCaption = document.getElementById("archiveLightboxCaption");
+  const closeButton = lightbox.querySelector(".archive-lightbox__close");
+
+  grid.addEventListener("click", (event) => {
+    const button = event.target.closest(".archive__image-button");
+    if (!button) return;
+
+    const image = button.querySelector("img");
+    lightboxImage.src = image.src;
+    lightboxImage.alt = button.getAttribute("aria-label");
+    lightboxCaption.textContent = button.closest(".archive__cell").querySelector("span").textContent;
+    lightbox.showModal();
+    closeButton.focus({ preventScroll: true });
+  });
+
+  closeButton.addEventListener("click", () => lightbox.close());
+  lightbox.addEventListener("click", (event) => {
+    if (event.target === lightbox) lightbox.close();
+  });
 }
 
 function renderContact(info) {
